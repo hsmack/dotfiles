@@ -1,0 +1,8 @@
+--- 
+gem: --no-ri --no-rdoc
+:sources: 
+- http://rubygems.org
+- http://gemcutter.org
+- http://gems.rubyforge.org
+- http://gems.github.com
+
