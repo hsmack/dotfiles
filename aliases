@@ -7,4 +7,4 @@ alias in='cd ~/INBOX'
 
 alias proj='cd /var/www/proj'
 alias wf='ssh user@remoteserver'
-alias dot='cd $HOME/dotfiles'
+alias dot='cd $HOME/.dotfiles'
