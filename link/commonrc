@@ -1,0 +1,7 @@
+# Load things
+source ~/.aliases
+source ~/.functions
+
+# Adjust $PATH
+source ~/.env
+
