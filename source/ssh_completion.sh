@@ -9,6 +9,3 @@ _my_hosts() {
   fi
 }
 complete -F _my_hosts -o nospace -o default ssh scp
-
-# SSH
-ssh-add >/dev/null 2>&1
