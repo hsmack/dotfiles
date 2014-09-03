@@ -9,7 +9,7 @@ Usage: $(basename "$0")
 See the README for documentation.
 https://github.com/hsmack/dotfiles
 
-Copyright (c) 2013 Henry Chiu
+Copyright (c) 2014 Henry Chiu
 Licensed under the MIT license.
 HELP
 exit; fi
@@ -120,6 +120,7 @@ fi
 
 #
 # the environment gets kicked off with 
+# looks for .profile before .bash_profile
 #
 if [[ -f ~/.profile ]]; then
   echo "" >> ~/.profile
