@@ -1,7 +1,26 @@
-# Load things
-source ~/.aliases
-source ~/.functions
+# Loads my environment
+# Some scripts/functions can be order dependent
 
 # Adjust $PATH
 source ~/.env
 
+# basics, custom 
+source ~/.aliases
+source ~/dotfiles/source/functions.sh
+
+# bash completion helpers, custom
+source ~/dotfiles/source/dir_completion.sh
+
+# bash completion, generic
+source ~/dotfiles/source/ssh_completion.sh
+source ~/dotfiles/source/git_completion.sh
+
+# aliases for color ls
+source ~/dotfiles/source/color_ls_darkbg.sh
+
+# add fancy prompt
+source ~/dotfiles/source/prompt_w_git_short1.sh
+#source ~/dotfiles/source/prompt_w_ruby_git_jeg.sh
+
+# history modifier.  Is annoying, but good for remote servers, where I always need to know the path
+#source ~/dotfiles/source/history_pwd.sh # overloads PROMPT_COMMAND
