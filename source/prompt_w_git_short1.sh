@@ -50,13 +50,13 @@ function prompt_git() {
 	output="$(echo "$status" | awk '/# Initial commit/ {print "(init)"}')"
 	[[ "$output" ]] || output="$(echo "$status" | awk '/# On branch/ {print $4}')"
 	[[ "$output" ]] || output="$(git branch | perl -ne '/^\* (.*)/ && print $1')"
-	flags="$(
-		echo "$status" | awk 'BEGIN {r=""} \
-			/^# Changes to be committed:$/        {r=r "+"}\
-			/^# Changes not staged for commit:$/  {r=r "!"}\
-			/^# Untracked files:$/                {r=r "?"}\
-			END {print r}'
-	)"
+	# flags="$(
+	# 	echo "$status" | awk 'BEGIN {r=""} \
+	# 		/^# Changes to be committed:$/        {r=r "+"}\
+	# 		/^# Changes not staged for commit:$/  {r=r "!"}\
+	# 		/^# Untracked files:$/                {r=r "?"}\
+	# 		END {print r}'
+	# )"
 	if [[ "$flags" ]]; then
 		output="$output$c1:$c0$flags"
 	fi
