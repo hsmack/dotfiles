@@ -8,5 +8,15 @@
 	g = log --graph --simplify-by-decoration --pretty=format:'%d' 
 	gl = !git g --all
 	gg = !git g --all
-	l = log --graph --pretty=format:'%C(yellow)%h%Creset%C(blue)%d%Creset %C(white bold)%s%Creset %C(white dim)(by %an %ar)%Creset'
+	l = log --graph --pretty='tformat:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'
 	ll = !git l --all
+	unstage = reset --
+[push]
+	default = simple
+[credential]
+	helper = cache
+[branch]
+	autosetuprebase = always
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
