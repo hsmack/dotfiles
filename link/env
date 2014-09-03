@@ -1,1 +1,5 @@
-export PATH=$HOME/dotfiles/bin:$PATH
+# Environment Variables
+
+# Path
+export PATH="$HOME/bin:$HOME/dotfiles/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+
